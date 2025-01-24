@@ -31,9 +31,9 @@
       #     };
       #     nvim = nixvim'.makeNixvimWithModule nixvimModule;
       #   in { imports = [ ./config/default.nix ]; };
-      systems =
-        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-
+      # systems =
+      #   [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      system = "x86_64-linux";
       # homeManagerModules.nixvim = { system, pkgs, home-manager, ... }: {
       #   programs.neovim.enable = true;
       # };
