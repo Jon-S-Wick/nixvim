@@ -21,6 +21,15 @@
         terraformls = { enable = true; };
         ansiblels = { enable = true; };
         jsonls = { enable = true; };
+
+        nixd = {
+          enable = true;
+          extraOptions = {
+            expr = "import <nixpkgs> {}";
+            offset_encoding = "utf-8";
+          };
+        };
+        clangd = { enable = true; };
         # helm_ls = {
         #   enable = true;
         #   extraOptions = {
