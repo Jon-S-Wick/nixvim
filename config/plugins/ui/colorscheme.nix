@@ -1,1 +1,1 @@
-{ colorscheme.kanagawa.enable = true; }
+{ colorschemes.everforest.enable = true; }

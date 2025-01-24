@@ -34,6 +34,31 @@
       systems =
         [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
+      homeManagerModules.nixvim = { system, pkgs, ... }: {
+        programs.neovim.enable = true;
+      };
+
+      # let
+      #   nixvimLib = nixvim.lib.${system};
+      #   nixvim' = nixvim.legacyPackages.${system};
+      #   nixvimModule = {
+      #     inherit pkgs;
+      #     inherit system; # or alternatively, set `pkgs`
+      #     module = import ./config; # import the module directly
+      #     # You can use `extraSpecialArgs` to pass additional arguments to your module files
+      #     extraSpecialArgs = {
+      #       # inherit (inputs) foo;
+      #     };
+      #   };
+      #   nvim = nixvim'.makeNixvimWithModule nixvimModule;
+      # in { pkgs, ... }@args: {
+      #   imports = [
+      #     (import ./config/default.nix inputs {
+      #       homeManagerModule = self.homeManagerModules;
+      #     })
+      #   ];
+      # };
+
       perSystem = { system, pkgs, ... }:
         let
           nixvimLib = nixvim.lib.${system};
