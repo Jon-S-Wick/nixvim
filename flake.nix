@@ -34,9 +34,9 @@
       systems =
         [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
-      homeManagerModules.nixvim = { system, pkgs, ... }: {
-        programs.neovim.enable = true;
-      };
+      # homeManagerModules.nixvim = { system, pkgs, home-manager, ... }: {
+      #   programs.neovim.enable = true;
+      # };
 
       # let
       #   nixvimLib = nixvim.lib.${system};
