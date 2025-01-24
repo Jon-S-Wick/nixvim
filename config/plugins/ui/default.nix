@@ -7,5 +7,6 @@
     ./neotree.nix
     ./todo.nix
     ./navic.nix
+    ./colorscheme.nix
   ];
 }
