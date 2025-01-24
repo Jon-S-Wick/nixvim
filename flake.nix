@@ -9,16 +9,17 @@
     nixvim.url = "github:nix-community/nixvim";
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
-  outputs = { nixvim, flake-parts, ... }@inputs:
+  outputs = { nixvim, flake-parts, nixpkgs, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems =
         [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
-      perSystem = { system, ... }:
+      perSystem = { system, pkgs, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
+            inherit pkgs;
             inherit system; # or alternatively, set `pkgs`
             module = import ./config; # import the module directly
             # You can use `extraSpecialArgs` to pass additional arguments to your module files

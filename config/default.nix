@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./plugins/ui/default.nix
     ./plugins/cmp/default.nix

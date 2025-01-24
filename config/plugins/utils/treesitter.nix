@@ -1,4 +1,4 @@
-{ pkgs }: {
+{ pkgs, ... }: {
   plugins = {
     treesitter = {
       enable = true;
@@ -7,6 +7,8 @@
         indent.enable = true;
         highlight.enable = true;
       };
+      folding = true;
+
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         bash
         json
