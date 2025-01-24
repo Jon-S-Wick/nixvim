@@ -3,6 +3,8 @@
     ./plugins/ui/default.nix
     ./plugins/cmp/default.nix
     ./plugins/lsp/lsp.nix
-    ./plugins/utils/undotree.nix
+    ./keybinds.nix
+    ./plugins/utils/utils.nix
+
   ];
 }
