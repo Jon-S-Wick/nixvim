@@ -5,6 +5,8 @@
     ./plugins/lsp/lsp.nix
     ./keybinds.nix
     ./plugins/utils/utils.nix
+	./opts.nix
+		./auto_cmds.nix
 
   ];
 }
