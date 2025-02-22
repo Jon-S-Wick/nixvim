@@ -34,7 +34,6 @@
             "ward"
             "info"
           ];
-          fdsaf ds
           lualine_x = [ "filetype" ];
           lualine_y = [ "progress" ];
           lualine_z = [ ''" " .. os.date("%R")'' ];
