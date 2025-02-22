@@ -23,7 +23,7 @@
       inlayHints = true;
 
       servers = {
-        java_language_server.enable = true;
+        # java_language_server.enable = true;
 
         html = {
           enable = true;
