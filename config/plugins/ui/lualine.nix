@@ -3,8 +3,11 @@
     lualine = {
       enable = true;
       settings = {
-        options.disabled_filetypes.statusline =
-          [ "dashboard" "alpha" "neo-tree" ];
+        options.disabled_filetypes.statusline = [
+          "dashboard"
+          "alpha"
+          "neo-tree"
+        ];
 
         alwaysDivideMiddle = true;
         globalstatus = true;
@@ -20,8 +23,18 @@
         };
         sections = {
           lualine_a = [ "mode" ];
-          lualine_b = [ "branch" "diff" "diagnostics" ];
+          lualine_b = [
+            "branch"
+            "diff"
+            "diagnostics"
+          ];
           lualine_c = [ "filename" ];
+          lualine_d = [
+            "error"
+            "ward"
+            "info"
+          ];
+          fdsaf ds
           lualine_x = [ "filetype" ];
           lualine_y = [ "progress" ];
           lualine_z = [ ''" " .. os.date("%R")'' ];
