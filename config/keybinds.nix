@@ -22,30 +22,52 @@
       key = "<C-l>";
       action = "<cmd>TmuxNavigateRight<cr>";
     }
+    #search
+    {
+      mode = "n";
+      key = "s";
+      action = "function() require('flash').jump() end, desc = 'Flash'";
+
+    }
+    {
+      mode = "n";
+      key = "S-s";
+      action = "function() require('flash').treesitter() end, desc = 'Flash Treesitter' ";
+
+    }
+
     #window resizing
     {
       mode = "n";
       key = "<C-Up>";
       action = "<cmd>resize +2<cr>";
-      options = { desc = "Increase Window Height"; };
+      options = {
+        desc = "Increase Window Height";
+      };
     }
     {
       mode = "n";
       key = "<C-Down>";
       action = "<cmd>resize -2<cr>";
-      options = { desc = "Decrease Window Height"; };
+      options = {
+        desc = "Decrease Window Height";
+      };
     }
     {
       mode = "n";
       key = "<C-Left>";
       action = "<cmd>vertical resize -2<cr>";
-      options = { desc = "Decrease Window Width"; };
+      options = {
+        desc = "Decrease Window Width";
+      };
     }
     {
       mode = "n";
       key = "<C-Right>";
       action = "<cmd>vertical resize +2<cr>";
-      options = { desc = "Increase Window Width"; };
+      options = {
+        desc = "Increase Window Width";
+      };
     }
 
     {

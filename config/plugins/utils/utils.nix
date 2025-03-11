@@ -15,6 +15,7 @@
       };
     };
     nvim-surround.enable = true;
+    flash.enable = true;
 
   };
 
