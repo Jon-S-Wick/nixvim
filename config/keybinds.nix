@@ -24,13 +24,11 @@
     }
     #search
     {
-      mode = "n";
       key = "s";
       action = "function() require('flash').jump() end, desc = 'Flash'";
 
     }
     {
-      mode = "n";
       key = "S-s";
       action = "function() require('flash').treesitter() end, desc = 'Flash Treesitter' ";
 

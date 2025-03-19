@@ -6,6 +6,7 @@
 
   ];
   plugins = {
+    rust-tools.enable = true;
     lsp-lines.enable = true;
     lsp-format.enable = false;
     helm.enable = true;
