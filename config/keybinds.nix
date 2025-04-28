@@ -24,6 +24,11 @@
     }
     #search
     {
+      mode = [
+        "n"
+        "x"
+        "o"
+      ];
       key = "s";
       action = "function() require('flash').jump() end, desc = 'Flash'";
 

@@ -3,6 +3,8 @@
     cmp-emoji = {
       enable = true;
     };
+    cmp-latex-symbols.enable = true;
+
     cmp = {
       enable = true;
       settings = {

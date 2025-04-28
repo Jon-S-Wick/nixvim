@@ -6,25 +6,27 @@
 
   ];
   plugins = {
+
     rust-tools.enable = true;
     lsp-lines.enable = true;
     lsp-format.enable = false;
     helm.enable = true;
-    nvim-jdtls = {
-      enable = true;
-      cmd = [
-        (lib.getExe pkgs.jdt-language-server)
-        ""
-      ];
-
-    };
+    java.enable = true;
+    # nvim-jdtls = {
+    #   enable = true;
+    #   cmd = [
+    #     (lib.getExe pkgs.jdt-language-server)
+    #     ""
+    #   ];
+    #
+    # };
 
     lsp = {
       enable = true;
       inlayHints = true;
 
       servers = {
-        # java_language_server.enable = true;
+        java_language_server.enable = true;
 
         html = {
           enable = true;
