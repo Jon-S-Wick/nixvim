@@ -15,7 +15,11 @@
       };
     };
     nvim-surround.enable = true;
-    flash.enable = true;
+    flash = {
+      enable = true;
+      autoLoad = true;
+
+    };
 
   };
 
