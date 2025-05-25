@@ -5,13 +5,14 @@
     # ./fidget.nix
 
   ];
+
   plugins = {
 
     rust-tools.enable = true;
     lsp-lines.enable = true;
     lsp-format.enable = false;
     helm.enable = true;
-    java.enable = true;
+    # java.enable = true;
     # nvim-jdtls = {
     #   enable = true;
     #   cmd = [

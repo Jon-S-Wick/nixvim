@@ -61,7 +61,7 @@
             #   };
             # };
           };
-          formatter = pkgs.nixfmt-rfc-style;
+          # formatter = pkgs.nixfmt-rfc-style;
 
           packages = {
             # Lets you run `nix run .` to start nixvim
