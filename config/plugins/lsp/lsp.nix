@@ -2,7 +2,7 @@
 {
   imports = [
     ./conform.nix
-    # ./fidget.nix
+    ./fidget.nix
 
   ];
 
