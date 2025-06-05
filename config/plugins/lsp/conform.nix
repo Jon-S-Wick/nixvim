@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  extraPackages = with pkgs; [ shfmt ];
+  extraPackages = with pkgs; [ shfmt google-java-format ];
   plugins.conform-nvim = {
     enable = true;
 
