@@ -9,7 +9,7 @@
         indent.enable = true;
         highlight.enable = true;
       };
-      folding = true;
+      folding.enable = true;
       nixvimInjections = true;
       languageRegister.liq = "liquidsoap";
 

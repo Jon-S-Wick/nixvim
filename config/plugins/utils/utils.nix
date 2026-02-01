@@ -16,9 +16,10 @@
     };
     nvim-surround.enable = true;
     flash = {
+
       enable = true;
       autoLoad = true;
-
+      lazyLoad.enable = false;
     };
 
   };

@@ -30,12 +30,13 @@
         "o"
       ];
       key = "s";
-      action = "function() require('flash').jump() end, desc = 'Flash'";
-
+      action = "<cmd>lua require('flash').jump()<cr>";
+      options.desc = "Flash jump";
     }
+
     {
       key = "S-s";
-      action = "function() require('flash').treesitter() end, desc = 'Flash Treesitter' ";
+      action = "<cmd>lua require('flash').treesitter()";
 
     }
 
@@ -203,7 +204,7 @@
     }
     {
       key = "<leader>cf";
-      action = "<cmd>lua vim.lsp.buf.formatting()<cr>";
+      action = "<cmd>lua require('conform').format()<cr>";
       options.desc = "LSP Formatting";
     }
     {

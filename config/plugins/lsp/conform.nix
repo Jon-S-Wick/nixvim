@@ -1,15 +1,24 @@
 { pkgs, ... }:
 {
-  extraPackages = with pkgs; [ shfmt google-java-format ];
+  extraPackages = with pkgs; [
+    shfmt
+    google-java-format
+    nixfmt
+    prettierd
+    prettier
+    yamlfmt
+    yamllint
+
+  ];
   plugins.conform-nvim = {
     enable = true;
 
-    lazyLoad.settings = {
-      cmd = [
-        "ConformInfo"
-      ];
-      event = [ "BufWrite" ];
-    };
+    # lazyLoad.settings = {
+    #   cmd = [
+    #     "ConformInfo"
+    #   ];
+    #   event = [ "BufWrite" ];
+    # };
 
     settings = {
       format_on_save = {
@@ -19,71 +28,46 @@
       notify_on_error = true;
 
       formatters_by_ft = {
-        liquidsoap = [ "liquidsoap-prettier" ];
+
         html = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         css = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
-        java = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         javascript = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         javascriptreact = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         typescript = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
         typescriptreact = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+          "prettierd"
+          "prettier"
         ];
+        markdown = [
+          "prettierd"
+          "prettier"
+        ];
+
         python = [ "black" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
-        markdown = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
+
         yaml = [
-          "yamllint"
           "yamlfmt"
+          "yamllint"
         ];
-        terragrunt = [
-          "hcl"
-        ];
-        bash = [
-          "shfmt"
-        ];
-        sh = [
-          "shfmt"
-        ];
+        bash = [ "shfmt" ];
+        sh = [ "shfmt" ];
       };
     };
   };

@@ -8,6 +8,7 @@
     ./plugins/utils/utils.nix
     ./opts.nix
     ./auto_cmds.nix
+    ./plugins/git.nix
 
   ];
 }

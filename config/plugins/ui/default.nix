@@ -8,5 +8,6 @@
     ./todo.nix
     ./navic.nix
     ./colorscheme.nix
+    ./noice.nix
   ];
 }

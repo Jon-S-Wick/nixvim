@@ -3,24 +3,13 @@
   imports = [
     ./conform.nix
     ./fidget.nix
-
   ];
 
   plugins = {
 
-    rust-tools.enable = true;
     lsp-lines.enable = true;
     lsp-format.enable = false;
     helm.enable = true;
-    # java.enable = true;
-    # nvim-jdtls = {
-    #   enable = true;
-    #   cmd = [
-    #     (lib.getExe pkgs.jdt-language-server)
-    #     ""
-    #   ];
-    #
-    # };
 
     lsp = {
       enable = true;
@@ -51,9 +40,6 @@
           enable = true;
         };
         terraformls = {
-          enable = true;
-        };
-        ansiblels = {
           enable = true;
         };
         jsonls = {
