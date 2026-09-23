@@ -66,7 +66,11 @@
           packages = {
             # Lets you run `nix run .` to start nixvim
             default = nvim;
-
+            nxvim = pkgs.runCommand "nxvim" { } ''
+              mkdir -p $out/bin
+              ln -s ${nvim}/bin/nvim $out/bin/nxvim
+            '';
+          
             stdenv.mkDerivation = {
               bundlers.x86_64-linux = rec {
                 identity = drv: drv;

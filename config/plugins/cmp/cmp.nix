@@ -65,7 +65,7 @@
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "C-e" = "cmp.mapping.close()";
           # "<C-CR>" = "cmp.mapping.complete()";
-          # "<C-CR>" = "cmp.mapping.confirm({ select = true })";
+          "<C-CR>" = "cmp.mapping.confirm({ select = true })";
           "<C-l>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
         };
       };

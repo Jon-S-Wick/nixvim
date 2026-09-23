@@ -4,6 +4,14 @@
   clipboard = {
     providers.wl-copy.enable = true;
   };
+  extraConfigLua = ''
+    vim.diagnostic.config({
+      virtual_text = {
+        source = true,
+        prefix = "●",
+      },
+    })
+  '';
   opts = {
 
     updatetime = 50; # Faster completion

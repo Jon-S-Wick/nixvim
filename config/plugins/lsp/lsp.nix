@@ -16,7 +16,7 @@
       inlayHints = true;
 
       servers = {
-        java_language_server.enable = true;
+        # java_language_server.enable = true;  # disabled in favor of jdtls
 
         html = {
           enable = true;

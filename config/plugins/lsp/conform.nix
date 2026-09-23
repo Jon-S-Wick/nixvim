@@ -66,6 +66,7 @@
           "yamlfmt"
           "yamllint"
         ];
+        java = [ "google-java-format" ];
         bash = [ "shfmt" ];
         sh = [ "shfmt" ];
       };
