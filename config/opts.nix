@@ -49,7 +49,7 @@
     foldenable = false;
     linebreak = true;
 
-    wrap = false;
+    wrap = true;
 
     swapfile = false;
     undofile = true;

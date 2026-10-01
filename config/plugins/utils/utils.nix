@@ -2,6 +2,10 @@
   imports = [
     ./undotree.nix
     ./treesitter.nix
+    ./wrap.nix
+    ./latex.nix
+    ./jupyter.nix
+    ./nextflow.nix
   ];
   plugins = {
     telescope = {

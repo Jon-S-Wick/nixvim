@@ -11,7 +11,12 @@
       };
       folding.enable = true;
       nixvimInjections = true;
-      languageRegister.liq = "liquidsoap";
+      # There is no nextflow parser, but the DSL is a Groovy dialect so the
+      # groovy grammar gives us highlighting, folds and indents for free.
+      languageRegister = {
+        groovy = [ "nextflow" ];
+        liquidsoap = [ "liq" ];
+      };
 
       grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
       # grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [

@@ -48,6 +48,21 @@
         jdtls = {
           enable = true;
         };
+        texlab = {
+          enable = true;
+          settings = {
+            latexFormatter = "latexindent";
+            build = {
+              program = "latexmk";
+              args = [
+                "-pdf"
+                "-interaction=nonstopmode"
+                "-synctex=1"
+                "%f"
+              ];
+            };
+          };
+        };
 
         nixd = {
           enable = true;
