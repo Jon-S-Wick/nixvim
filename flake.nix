@@ -29,13 +29,15 @@
       perSystem =
         {
           system,
-          pkgs,
           inputs',
           self',
-          nixpkgs,
           ...
         }:
         let
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
