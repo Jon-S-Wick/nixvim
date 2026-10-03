@@ -9,9 +9,11 @@
         view_method = "zathura";
       };
 
-    # texliveSmall already ships the engines (pdflatex, xelatex, lualatex),
+    # scheme-small already ships the engines (pdflatex, xelatex, lualatex),
     # latex-dev, bibtex and makeindex; the rest are the packages that are
-    # commonly reached for while writing papers.
+    # commonly reached for while writing papers. Anything \usepackage'd in a
+    # document MUST be listed here or kpathsea will not find the .sty and
+    # the compile dies at the first \usepackage line.
     texlivePackage = pkgs.texlive.withPackages (
       ps: with ps; [
         scheme-small
@@ -41,6 +43,18 @@
         fancyhdr
         todonotes
         pgfplots
+        # resume / cover letter templates
+        lipsum
+        blindtext
+        ulem
+        fontawesome5
+        eso-pic
+        paracol
+        changepage
+        needspace
+        lastpage
+        datetime
+        lato
       ]
     );
 
