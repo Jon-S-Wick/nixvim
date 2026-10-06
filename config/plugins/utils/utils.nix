@@ -6,6 +6,7 @@
     ./latex.nix
     ./jupyter.nix
     ./nextflow.nix
+    ./rainbow.nix
   ];
   plugins = {
     telescope = {

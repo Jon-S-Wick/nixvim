@@ -5,11 +5,16 @@
     ./fidget.nix
   ];
 
+  extraPackages = with pkgs; [
+    (rWrapper.override {
+      packages = with rPackages; [ languageserver ];
+    })
+  ];
+
   plugins = {
 
     lsp-lines.enable = true;
     lsp-format.enable = false;
-    lspconfig.enable = true;
     helm.enable = true;
 
     lsp = {
@@ -53,6 +58,10 @@
           };
         };
         clangd.enable = true;
+        r_language_server = {
+          enable = true;
+          package = null;
+        };
       };
       keymaps = {
         silent = true;
