@@ -7,7 +7,7 @@
     ./neotree.nix
     ./todo.nix
     ./navic.nix
-    ./colorscheme.nix
+    # ./colorscheme.nix
     ./noice.nix
   ];
 }

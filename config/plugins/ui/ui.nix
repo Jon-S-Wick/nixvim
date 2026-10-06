@@ -11,6 +11,8 @@
     todo-comments.enable = true;
     indent-blankline.enable = true;
 
+    colorizer.enable = true;
+
   };
 
 }

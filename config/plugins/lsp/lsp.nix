@@ -9,45 +9,26 @@
 
     lsp-lines.enable = true;
     lsp-format.enable = false;
+    lspconfig.enable = true;
     helm.enable = true;
 
     lsp = {
       enable = true;
       inlayHints = true;
-
       servers = {
         # java_language_server.enable = true;  # disabled in favor of jdtls
 
-        html = {
-          enable = true;
-        };
-        lua_ls = {
-          enable = true;
-        };
-        nil_ls = {
-          enable = true;
-        };
-        ts_ls = {
-          enable = true;
-        };
-        marksman = {
-          enable = true;
-        };
-        pyright = {
-          enable = true;
-        };
-        gopls = {
-          enable = true;
-        };
-        terraformls = {
-          enable = true;
-        };
-        jsonls = {
-          enable = true;
-        };
-        jdtls = {
-          enable = true;
-        };
+        html.enable = true;
+
+        lua_ls.enable = true;
+        nil_ls.enable = true;
+        ts_ls.enable = true;
+        marksman.enable = true;
+        pyright.enable = true;
+        gopls.enable = true;
+        terraformls.enable = true;
+        jsonls.enable = true;
+        jdtls.enable = true;
         texlab = {
           enable = true;
           settings = {
@@ -71,9 +52,7 @@
             offset_encoding = "utf-8";
           };
         };
-        clangd = {
-          enable = true;
-        };
+        clangd.enable = true;
       };
       keymaps = {
         silent = true;
